@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图片响应布局</title>
+<style type="text/css">
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content: ;}
+abbr,acronym{border:0;}
+img{display: block;}
+
+#main-wrap{position: relative; margin:0 auto;}
+.item-box{ position:absolute;left:0;top:0;padding:10px 0 0 10px;margin-left:-5px;}
+.item-box .pic{border-radius:5px;padding: 10px;border:1px solid #ccc;box-shadow: #ccc 0 0 5px;}
+.item-box .pic img{width: 160px;height:auto;}
+
+.loading{ visibility:hidden;width:200px;height:45px; margin:30px auto; background-color:#ccc; text-align:center; line-height:45px;border:1px solid #eee;border-radius:5px;}
+</style>
+<script type="text/javascript" src="jq.js"></script>
+<script type="text/javascript" src="pubu-layout.js"></script>
+</head>
+<body style="padding-bottom:200px;">
+
+<div id="main-wrap">
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/1.jpg">
+		</div>
+	</div>
+
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/2.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/4.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/5.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/6.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/1.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/7.jpg">
+		</div>
+	</div>
+
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/8.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/9.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/10.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/11.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/12.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/10.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/3.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/4.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/5.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/6.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/1.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/7.jpg">
+		</div>
+	</div>
+
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/8.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/9.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/10.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/11.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/12.jpg">
+		</div>
+	</div>
+	<div class="item-box">
+		<div class="pic">
+			<img src="images/10.jpg">
+		</div>
+	</div>
+</div>
+<div id="loading" class="loading">正在加载中...</div>
+
+
+<script>
+window.onload=function(){
+	
+
+var timer=null;
+
+var demo=new WaterFlowlayout($("#main-wrap"),$("#loading"),{
+										  callBack:function(){
+											  	//如果加载完毕，将status=true
+												window.clearTimeout(timer);
+											  	timer=window.setTimeout(function(){
+														demo.reloadView([
+																	{src:"images/16.jpg"},
+																	{src:"images/17.jpg"},
+																	{src:"images/18.jpg"},
+																	{src:"images/19.jpg"},
+																	{src:"images/20.jpg"},
+																	{src:"images/16.jpg"},
+																	{src:"images/17.jpg"},
+																	{src:"images/18.jpg"},
+																	{src:"images/19.jpg"},
+																	{src:"images/20.jpg"},
+																	{src:"images/16.jpg"},
+																	{src:"images/17.jpg"},
+																	{src:"images/18.jpg"},
+																	{src:"images/19.jpg"},
+																	{src:"images/20.jpg"},
+																	  {src:"images/16.jpg"},
+																	{src:"images/17.jpg"},
+																	{src:"images/18.jpg"},
+																	{src:"images/19.jpg"},
+																	{src:"images/20.jpg"},
+																	{src:"images/16.jpg"},
+																	{src:"images/17.jpg"},
+																	{src:"images/18.jpg"},
+																	{src:"images/19.jpg"},
+																	{src:"images/20.jpg"},
+																	{src:"images/21.jpg"}
+																]
+														);
+												},1000);
+
+										  },
+										  colSize:6//要几列展示
+										  });
+
+
+
+										  
+										  
+
+};
+
+
+
+
+</script>
+
+
+</body>
+</html>
